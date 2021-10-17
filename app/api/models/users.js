@@ -9,8 +9,8 @@ const saltRounds = 10;
 //Definimos los esquemas
 const Schema = _Schema;
 // Creamos el objeto del esquema con sus correspondientes campos
-const UserSchema = new Schema({
- nombre: {
+const userSchema = new Schema({
+ name: {
   type: String,
   trim: true,  
   required: true,
@@ -28,9 +28,9 @@ const UserSchema = new Schema({
 });
 // Antes de almacenar la contraseña en la base de datos la encriptamos con Bcrypt, 
 //  esto es posible gracias al middleware de mongoose
-UserSchema.pre('save', function(next){
+userSchema.pre('save', function(next){
   this.password = hashSync(this.password, saltRounds);
   next();
 });
 // Exportamos el modelo para usarlo en otros ficheros
-export default model('User', UserSchema);
+export default model('User', userSchema);

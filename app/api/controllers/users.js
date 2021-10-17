@@ -8,7 +8,7 @@ import { sign } from 'jsonwebtoken';
 // Codificamos las operaciones que se podran realizar con relacion a los usuarios
 export function create(req, res, next) {
 
-    _create({ nombre: req.body.nombre, email: req.body.email, password: req.body.password }, function (err, result) {
+    _create({ name: req.body.name, email: req.body.email, password: req.body.password }, function (err, result) {
         if (err)
             next(err);
 
