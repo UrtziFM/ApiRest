@@ -1,8 +1,8 @@
-// Cargamos el modelo recien creado
+// Load the new model for users
 import { create as _create, findOne } from '../models/users';
-// Cargamos el módulo de bcrypt
+// Load bcrypt library
 import { compareSync } from 'bcrypt'; 
-// Cargamos el módulo de jsonwebtoken
+// Load jwt library
 import { sign } from 'jsonwebtoken';
 
 // Codificamos las operaciones que se podran realizar con relacion a los usuarios
