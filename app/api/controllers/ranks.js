@@ -7,9 +7,7 @@ export function create(req, res, next) {
     _create({ name: req.body.name, score: req.body.score, date: req.body.date }, function (err, result) {
         if (err)
             next(err);
-
         else
             res.json({ status: "Ok", message: "User score is right", data: null });
-
     });
 }

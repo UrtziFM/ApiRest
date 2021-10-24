@@ -11,10 +11,8 @@ export function create(req, res, next) {
     _create({ name: req.body.name, email: req.body.email, password: req.body.password }, function (err, result) {
         if (err)
             next(err);
-
         else
             res.json({ status: "Ok", message: "Usuario agregado exitosamente!!!", data: null });
-
     });
 }
 export function authenticate(req, res, next) {
