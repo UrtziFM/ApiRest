@@ -1,4 +1,6 @@
+// Load the new model for videogames
 import { findById, find, findByIdAndUpdate, findByIdAndRemove, create as _create } from '../models/videogames';
+
 // CRUD operations
 
 // get by id method

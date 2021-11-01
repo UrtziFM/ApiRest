@@ -21,5 +21,5 @@ const rankSchema = new Ranking({
         required: true,
     }
 });
-
+//export schema
 export default model('Rank', rankSchema);
